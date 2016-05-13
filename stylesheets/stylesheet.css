@@ -24,11 +24,11 @@ box {
   margin-top: -250px;
   transform-origin: 50% 48%;
   border-radius: 43%;
-  animation: drift 3000ms infinite linear;
+  animation: drift 10000ms infinite linear;
 }
 
 .wave.-three {
-  animation: drift 2500ms infinite linear;
+  animation: drift 500ms infinite linear;
 }
 
 .wave.-two {
@@ -76,7 +76,7 @@ box {
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 300;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
