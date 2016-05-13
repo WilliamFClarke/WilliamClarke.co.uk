@@ -1,10 +1,10 @@
 * {
   box-sizing: border-box; }
 /* BOX object thingy */
-.box {
-  width: 100%;
-  height: 200px;
- /* border-radius: 5px;*/
+box {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
   box-shadow: 0 2px 30px rgba(black, .2);
   background: lighten(#f0f4c3, 10%);
   position: relative;
@@ -18,17 +18,17 @@
   top: 3%;
   left: 50%;
   background: #0af;
-  width: 6000px;
-  height: 6000px;
+  width: 500px;
+  height: 500px;
   margin-left: -250px;
   margin-top: -250px;
   transform-origin: 50% 48%;
   border-radius: 43%;
-  animation: drift 10000ms infinite linear;
+  animation: drift 3000ms infinite linear;
 }
 
 .wave.-three {
-  animation: drift 8000ms infinite linear;
+  animation: drift 2500ms infinite linear;
 }
 
 .wave.-two {
@@ -44,7 +44,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(top, rgba(237,171,206,1) 0%, rgba(167,235,216,1) 100%);
+  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
   z-index: 11;
   transform: translate3d(0, 0, 0);
 }
