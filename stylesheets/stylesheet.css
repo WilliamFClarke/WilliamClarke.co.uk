@@ -28,7 +28,7 @@ box {
 }
 
 .wave.-three {
-  animation: drift 2000ms infinite linear;
+  animation: drift 20000ms infinite linear;
 }
 
 .wave.-two {
