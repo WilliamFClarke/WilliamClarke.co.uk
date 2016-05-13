@@ -24,15 +24,15 @@ box {
   margin-top: -250px;
   transform-origin: 50% 48%;
   border-radius: 43%;
-  animation: drift 100ms infinite linear;
+  animation: drift 10000ms infinite linear;
 }
 
 .wave.-three {
-  animation: drift 200ms infinite linear;
+  animation: drift 2000ms infinite linear;
 }
 
 .wave.-two {
-  animation: drift 1000ms infinite linear;
+  animation: drift 10000ms infinite linear;
   opacity: .1;
   background: yellow;
 }
