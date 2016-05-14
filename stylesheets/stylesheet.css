@@ -16,7 +16,7 @@ body {
 .box {
   width: 300px;
   height: 300px;
-  border-radius: 5px;
+  border-radius: 0px;
   box-shadow: 0 2px 30px rgba(black, .2);
   background: lighten(#f0f4c3, 10%);
   position: relative;
@@ -36,11 +36,11 @@ body {
   margin-top: -250px;
   transform-origin: 50% 48%;
   border-radius: 43%;
-  animation: drift 3000ms infinite linear;
+  animation: drift 10000ms infinite linear;
 }
 
 .wave.-three {
-  animation: drift 2500ms infinite linear;
+  animation: drift 8000ms infinite linear;
 }
 
 .wave.-two {
