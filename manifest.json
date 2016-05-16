@@ -2,9 +2,9 @@
   "name": "Web Application Manifest",
   "icons": [
     {
-      "src": "williamfclarke.github.io/appicon192.png",
+      "src": "appicon192.png",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/png"
     }
   ],
   "start_url": "index.html",
