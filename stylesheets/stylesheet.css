@@ -99,7 +99,7 @@ body {
                         inset  0 -8px 8px -8px #696868;
 }
 
-.gbadge {
+#gbadge {
   height: 30px; 
   width: 30px;
   margin-left: auto;
