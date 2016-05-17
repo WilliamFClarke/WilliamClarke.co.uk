@@ -87,7 +87,7 @@ body {
 /* WAVES CSS END */
 
 #inset-shadow-bar { 
-    background: #25a7e3; 
+    background: #0099ff; 
     height: 400px; 
     width: 100%;
 
@@ -100,7 +100,8 @@ body {
 }
 
 .gbadge {
-  width: 0%;
+  height: 30px; 
+  width: 30px;
   margin-left: auto;
   margin-right: auto;
 }
