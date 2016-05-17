@@ -106,7 +106,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c95ff', end
 
 .gbadge {
     margin: auto;
-
+    width: 100%;
     padding: 15px;
 }
 
