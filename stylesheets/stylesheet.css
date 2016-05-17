@@ -1,8 +1,6 @@
 *, *:before, *:after {
   box-sizing: border-box;
 }
-@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);
-
 body {
   padding: 0;
   margin: 0;
@@ -105,9 +103,6 @@ body {
     width: 10%;
     padding: 15px;
 }
-
-
-
 
 a {
   color: #1e6bb8;
