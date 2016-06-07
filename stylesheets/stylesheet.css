@@ -219,6 +219,10 @@ a {
 @media screen and (max-width: 42em) {
   .project-tagline {
     font-size: 1rem; } }
+main-content {
+  max-width: calc(38% + 50px);
+  margin: 50px auto;
+}
 
 .main-content :first-child {
   margin-top: 0; }
