@@ -74,19 +74,6 @@ section{
       box-shadow: inset 0px 0px 2px 0px #2c3e50;
       filter:progid:DXImageTransform.Microsoft.Shadow(color=#2c3e50, Direction=NaN, Strength=2);
       opacity: 0;
-      -webkit-animation-name: fadeIn;
-      animation-name: fadeIn;
-      -webkit-animation-delay: 1s;
-      animation-delay: 0.5s;
-      -webkit-animation-duration: 3s;
-      animation-duration: 3s;
-      -webkit-animation-fill-mode: both;
-      animation-fill-mode: both;
-      
-      @keyframes fadeIn{
-        0%{opacity:0;}
-        100%{opacity:1;}
-      }
 
       .header-title{
         color: #fff;
