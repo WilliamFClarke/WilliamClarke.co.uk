@@ -41,7 +41,7 @@ section{
     font-size: $font-size-2;
     text-align: center;
   }
-}
+
 
 .intro{
   background: url(https://images.unsplash.com/photo-1466971060667-16467c7d04ee?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d6160f1c19b4cfdd07911d9febfd7e78);
@@ -85,9 +85,8 @@ section{
         color: #2c3e50;
         font-size: 2em;
         }
-    }
-  }
-}
+  
+
 
 .about-myself{
   color: $text-color-2;
@@ -120,7 +119,7 @@ section{
     text-align: justify;
     font-size: 1.2em;
   }
-}
+
 
 .services{
   padding: 20px 0 50px 0;
@@ -161,7 +160,7 @@ section{
           -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
         }
-      }
+      
       
       h3{
         font-size: font-size-1;
@@ -172,9 +171,9 @@ section{
       p{
         text-align: justify;
       }
-    }
-  }
-}
+    
+  
+
 
 .portfolio{
   background: $bg-color-1;
@@ -247,10 +246,10 @@ section{
         & p{
           color: $text-color-1;
         }
-      }
-    }
-  }
-}
+      
+    
+  
+
 
 .contact{
   padding: 20px 0;
@@ -275,9 +274,9 @@ section{
       .twitter:hover{color:#57AEE7;}
       .linkedin:hover{color:#0177B5;}
       .codepen:hover{color:#AE8915;}
-    }
-  }
-}
+    
+  
+
 
 .clear{
   clear: both;
@@ -311,7 +310,7 @@ section{
       font-size: $font-size-1;
     }
   }
-}
+
 
 @media screen and (max-width: 480px) {
     
@@ -329,4 +328,4 @@ section{
     }
   }
   
-}
+
