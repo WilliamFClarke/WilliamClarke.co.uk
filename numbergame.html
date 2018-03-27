@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+  <title>number game</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
 
-<h1>Number Game!</h1>
-<h1 id="curNum"></h1>
-<input type="TEXT" id="userTest" size="40" placeholder="Name"><br>
-<input type="TEXT" id="numberTest" size="40" placeholder="Number"><br>
+<body onLoad="getCurentNumber()">
+  <article id="main">
+    <header>
+      <h2>Will's Number Game</h2>
+      <p id="curNum">?</p>
+    </header>
+      <input type="TEXT" id="userTest" size="40" placeholder="Name"><br>
+      <input type="TEXT" id="numberTest" size="40" placeholder="Number"><br>
 
-<button type="button" onclick="loadDoc()">Submit Number</button>
+      <button type="button" onclick="loadDoc()">Submit Number</button>
 
-<button type="button" onclick="getCurentNumber()">Get Current Number</button>
+      <!-- <button type="button" onclick="getCurentNumber()">Refresh Current Number</button> -->
 
-<p id="demo"></p>
+      <p id="demo"></p>
 
 <script>
 function loadDoc() {
@@ -36,7 +45,7 @@ function loadDoc() {
   };
   };
 
-function getCurentNumber() {
+setInterval(function getCurentNumber() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -46,7 +55,7 @@ function getCurentNumber() {
   xhttp.open("GET", "https://wills-awesome-number-game.herokuapp.com/numbergame/getnumber", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send();
-};
+}, 10000);
 </script>
 
 </body>
