@@ -13,9 +13,6 @@
 
 <p id="demo"></p>
 
-
-
-
 <script>
 function loadDoc() {
   var name = document.getElementById("userTest").value
@@ -28,7 +25,7 @@ function loadDoc() {
         document.getElementById("demo").innerHTML = this.responseText;
       };
     };
-    xhttp.open("POST", "http://localhost:3000/numbergame/setnumber?user=" + name + "&number=" + number , true);
+    xhttp.open("POST", "https://wills-awesome-number-game.herokuapp.com/numbergame/setnumber?user=" + name + "&number=" + number , true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
     getCurentNumber();
@@ -46,7 +43,7 @@ function getCurentNumber() {
       document.getElementById("curNum").innerHTML = this.responseText;
     };
   };
-  xhttp.open("GET", "http://localhost:3000/numbergame/getnumber", true);
+  xhttp.open("GET", "https://wills-awesome-number-game.herokuapp.com/numbergame/getnumber", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send();
 };
@@ -54,34 +51,3 @@ function getCurentNumber() {
 
 </body>
 </html>
-<!--
-
-  <head>
-    <title>Number Game</title>
-    <script>
-      var url = "http://localhost:3000/numbergame/setnumber";
-      var user = document.getElementById("userTest");
-      var number = document.getElementById("numberTest");
-      var params = "user=" + user + "&number=" + number;
-      var xhr = new XMLHttpRequest();
-      var submit = document.getElementById("submit");
-      xhr.open("POST", url, true);
-
-      //Send the proper header information along with the request
-      xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-      document.getElementById('submit').onclick = function() {
-      xhr.send(params)
-      };
-      </script>
-  </head>
-
-
-
-  <body>
-    <h1>Hello people !</h1>
-    <input type="TEXT" id="userTest" size="40"><br>
-    <input type="TEXT" id="numberTest" size="40"><br>
-    <input type="button" id="submit" value="submit">
-  </body>
-</html> -->
