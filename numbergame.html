@@ -35,7 +35,9 @@ function loadDoc() {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("demo").innerHTML = this.responseText;
-        document.getElementById("myNumbers").innerHTML += number + " ";
+        if (this.responseText.includes("CORRECT")){
+          document.getElementById("myNumbers").innerHTML += number + " ";
+        };  
       };
     };
     xhttp.open("POST", "https://wills-awesome-number-game.herokuapp.com/numbergame/setnumber?user=" + name + "&number=" + number , true);
