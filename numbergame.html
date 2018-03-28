@@ -21,6 +21,9 @@
       <!-- <button type="button" onclick="getCurentNumber()">Refresh Current Number</button> -->
 
       <p id="demo"></p>
+      <h3 id="numbersTitle">Your Numbers:</h3>
+      <p id="myNumbers"></p>
+    
 
 <script>
 function loadDoc() {
@@ -32,6 +35,7 @@ function loadDoc() {
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         document.getElementById("demo").innerHTML = this.responseText;
+        document.getElementById("myNumbers").innerHTML += number + " ";
       };
     };
     xhttp.open("POST", "https://wills-awesome-number-game.herokuapp.com/numbergame/setnumber?user=" + name + "&number=" + number , true);
