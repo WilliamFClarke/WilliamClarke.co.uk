@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
-<body onLoad="getCurentNumber()">
+<body onLoad="getCurentNumberInstant()">
   <article id="main">
     <header>
       <h2>Will's Number Game</h2>
@@ -56,6 +56,19 @@ setInterval(function getCurentNumber() {
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send();
 }, 5000);
+  
+function getCurentNumberInstant() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("curNum").innerHTML = this.responseText;
+    };
+  };
+  xhttp.open("GET", "https://wills-awesome-number-game.herokuapp.com/numbergame/getnumber", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send();
+};
+  
 </script>
 
 </body>
