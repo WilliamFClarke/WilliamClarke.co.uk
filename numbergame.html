@@ -12,24 +12,37 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
 </head>
 
-<body onLoad="getCurentNumberInstant()">
-  <article id="main">
-    <header>
-      <h2>Will's Number Game</h2>
-      <p id="curNum">?</p>
-    </header>
-      <input type="TEXT" id="userTest" size="40" placeholder="Name"><br>
-      <input type="TEXT" pattern="[0-9]*" inputmode="numeric" id="numberTest" size="40" placeholder="Number"><br>
+<body onLoad="getCurentNumberInstant();getCurentNumber();">
+  <div  id="background-image" class="uk-background-fixed uk-background-center-center uk-height-viewport" style="background-image: url(bg1.jpg);">
+    <div  id="Game" class="uk-animation-fade uk-position-center uk-card uk-card-default uk-card-body uk-card-hover">
+      <div id="content" class="uk-margin uk-text-center">
+        <h3 class="uk-card-title">Will's Number Game</h3>
+        <h1 id="curNum" class="uk-align-center">?</h1>
+        <div class="uk-margin">
+          <input type="TEXT" id="userTest" class="uk-input uk-width-1-2" type="text" placeholder="Name">
+          <input type="TEXT" id="numberTest" pattern="[0-9]*" class="uk-input uk-width-1-2" inputmode="numeric" placeholder="Number">
+        </div>
+        <button type="button" class="uk-button uk-button-default" onclick="loadDoc()">Submit Number</button>
+        <p id="demo"> &nbsp; </p>
+        <hr class="uk-divider-small">
+        <h3 id="numbersTitle">Your Numbers:</h3>
+        <p id="myNumbers" class="uk-text-break">&nbsp;</p>
+        <button type="button" uk-toggle="target: #how-to-modal" type="button" class="uk-text-meta" uk-icon="question" ></button>
+      </div>
+    </div>
+  </div>
 
-      <button type="button" onclick="loadDoc()">Submit Number</button>
 
-      <!-- <button type="button" onclick="getCurentNumber()">Refresh Current Number</button> -->
 
-      <p id="demo"></p>
-      <h3 id="numbersTitle">Your Numbers:</h3>
-      <p id="myNumbers"></p>
-    
+  <!-- This is the modal -->
+  <div id="how-to-modal" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body">
+          <h2 class="uk-modal-title">HOW TO PLAY</h2>
+          <p>Will's number game is a massively multiplayer online cooperative counting game. That's right, the worlds first MMOCCG! Submit the number on screen with you username to claim that number (it's yours to keep forever). However, you'll need to be quick as each number can only be claimed by one person!<br><br>  Happy Counting &#x1F601; </p>
+      </div>
+  </div>
 
+</body>
 <script>
 function loadDoc() {
   var name = document.getElementById("userTest").value
@@ -42,16 +55,16 @@ function loadDoc() {
         document.getElementById("demo").innerHTML = this.responseText;
         if (this.responseText.includes("CORRECT!")){
           document.getElementById("myNumbers").innerHTML += number + " ";
-        };  
+        };
       };
     };
     xhttp.open("POST", "https://wills-awesome-number-game.herokuapp.com/numbergame/setnumber?user=" + name + "&number=" + number , true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
-    getCurentNumber();
+    getCurentNumberInstant();
   } else {
     document.getElementById("demo").innerHTML = "Name or Number not set"
-    getCurentNumber();
+    getCurentNumberInstant();
     return;
   };
   };
@@ -66,8 +79,8 @@ setInterval(function getCurentNumber() {
   xhttp.open("GET", "https://wills-awesome-number-game.herokuapp.com/numbergame/getnumber", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send();
-}, 50000);
-  
+}, 5000);
+
 function getCurentNumberInstant() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -79,7 +92,7 @@ function getCurentNumberInstant() {
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send();
 };
-  
+
 </script>
 
 </body>
