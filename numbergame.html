@@ -15,9 +15,11 @@
 <body onLoad="getCurentNumberInstant();getCurentNumber();">
   <div  id="background-image" class="uk-background-fixed uk-background-center-center uk-height-viewport" style="background-image: url(bg1.jpg);">
     <div  id="Game" class="uk-animation-fade uk-position-center uk-card uk-card-default uk-card-body uk-card-hover">
-      <div id="content" class="uk-margin uk-text-center">
+      <div id="content" class="uk-text-center">
         <h3 class="uk-card-title">Will's Number Game</h3>
-        <h1 id="curNum" class="uk-align-center">?</h1>
+        <div class="uk-margin">
+          <h1 id="curNum" class="uk-heading-hero uk-text-center">?</h1>
+        </div>
         <div class="uk-margin">
           <input type="TEXT" id="userTest" class="uk-input uk-width-1-2" type="text" placeholder="Name">
           <input type="TEXT" id="numberTest" pattern="[0-9]*" class="uk-input uk-width-1-2" inputmode="numeric" placeholder="Number">
@@ -37,6 +39,7 @@
   <!-- This is the modal -->
   <div id="how-to-modal" uk-modal>
       <div class="uk-modal-dialog uk-modal-body">
+          <button class="uk-modal-close-default" type="button" uk-close></button>
           <h2 class="uk-modal-title">HOW TO PLAY</h2>
           <p>Will's number game is a massively multiplayer online cooperative counting game. That's right, the worlds first MMOCCG! Submit the number on screen with you username to claim that number (it's yours to keep forever). However, you'll need to be quick as each number can only be claimed by one person!<br><br>  Happy Counting &#x1F601; </p>
       </div>
