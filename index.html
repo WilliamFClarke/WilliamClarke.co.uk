@@ -1,37 +1,36 @@
-<!DOCTYPE HTML>
-<html>
-   <head>
-      <title>William Clarke</title>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <!-- UIkit CSS -->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/css/uikit.min.css" />
-      <!-- UIkit JS -->
-      <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit-icons.min.js"></script>
-   </head>
-   <body class="uk-background-muted">
-      <article id="main">
-         <header id="mainheader"  class="uk-background-fixed uk-background-center-center uk-height-viewport " uk-parallax="bgy: -200" style="background-image: url(https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format);">
-            <div class="uk-position-center uk-padding-large">
-               <h1 class="uk-text-center uk-text-lighter">William Clarke</h1>
-               <div class="uk-text-center">
-                  <h4 class="uk-text-lighter">Test Automation Engineer</h4>
-                  <a href="mailto:will.fclarke@gmail.com" class="uk-margin-small-right" uk-icon="mail"></a>
-                  <a href="https://www.linkedin.com/in/WilliamFClarke" class="uk-margin-small-right" uk-icon="linkedin"></a>
-                  <a href="https://github.com/WilliamFClarke" uk-icon="github"></a>
-               </div>
-            </div>
-            <a class="uk-position-bottom-center " href="#mainbody"uk-icon="chevron-down" uk-scroll></a>
-         </header>
-         <div id="mainbody" class="uk-width-5-6 uk-align-center">
-         <div class="uk-padding-large">
-         <div id = "aboutsection" uk-scrollspy="cls: uk-animation-fade; delay: 500; repeat: false">
-            <h3 class="uk-text-center">About Me</h3>
-            <p class="uk-text-center">Software Test Automation Engineer with 9 years experience in Browser, iOS, android and desktop testing.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>William Clarke</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.17/dist/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <canvas class="webgl"></canvas>
+
+    <section class="section">
+        <div class="uk-text-center">
+            <h1>William Clarke</h1>
+            <h4 class="uk-text-lighter">Test Automation Engineer</h4>
+            <a href="mailto:will.fclarke@gmail.com" class="uk-margin-small-right" uk-icon="mail"></a>
+            <a href="https://www.linkedin.com/in/WilliamFClarke" class="uk-margin-small-right" uk-icon="linkedin"></a>
+            <a href="https://github.com/WilliamFClarke" uk-icon="github"></a>
          </div>
-         <h3 class="uk-text-center" uk-scrollspy="cls: uk-animation-fade; delay: 500; repeat: false">Example Projects</h3>
-         <div class="uk-child-width-1-2@m" uk-grid>
+    </section>
+    <section class="section">
+        <div class="uk-text-center">
+            <h1>About Me</h1>
+            <h4 class="uk-text-lighter">Software Test Automation Engineer with over 10 years experience in Browser, iOS, android and desktop testing.</h4>
+        </div>
+    </section>
+    <section class="section">
+        <div class="uk-child-width-1-2@m" uk-grid>
             <div>
                <div class="uk-card uk-card-default uk-border-rounded uk-box-shadow-small uk-box-shadow-hover-large"  uk-scrollspy="cls: uk-animation-slide-left; repeat: false" >
                   <a href="https://github.com/WilliamFClarke/webdriverio-cucumber-boilerplate" class="uk-link-reset">
@@ -42,7 +41,7 @@
                      <div class="uk-card-body">
                         <div class="uk-card-badge uk-label">TEST</div>
                         <h3 class="uk-card-title">Browser Automation</h3>
-                        <p>Browser Autoamtion Project created using Webdriverio.</p>
+                        <h4>Browser Autoamtion Project created using Webdriverio.</h4>
                      </div>
                   </a>
                </div>
@@ -56,31 +55,26 @@
                         <div class="uk-card-body">
                            <div class="uk-card-badge uk-label">GAME</div>
                            <h3 class="uk-card-title">Number Game</h3>
-                           <p>Demo Game Created using nodeJS</p>
+                           <h4>Demo Game Created using nodeJS</h4>
                         </div>
 					</div>
                   <a>
                </div>
             </div>
          </div>
-         <footer id="footer">
-         <div class="uk-text-meta uk-text-center uk-align-center uk-padding-large" uk-scrollspy="cls: uk-animation-fade; delay: 500; repeat: false">
-         <a href="mailto:will.fclarke@gmail.com" class="uk-margin-small-right" uk-icon="mail"></a>
-         <a href="https://www.linkedin.com/in/WilliamFClarke" class="uk-margin-small-right" uk-icon="linkedin"></a>
-         <a href="https://github.com/WilliamFClarke" uk-icon="github"></a>
-         <p>Created by William Clarke using <a href="https://getuikit.com/">UIKit</a>
-         <p>&copy; William Clarke</p>
-         </div>
-         </footer>
-      </article>
-      <!-- Footer -->
-      <!-- Scripts -->
-      <script src="assets/js/jquery.min.js"></script>s
-      <script src="assets/js/jquery.scrollex.min.js"></script>
-      <script src="assets/js/jquery.scrolly.min.js"></script>
-      <script src="assets/js/skel.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-      <script src="assets/js/main.js"></script>
-   </body>
+    </section>
+    <footer id="footer">
+        <div class="uk-text-meta uk-text-center uk-align-center uk-padding-large" uk-scrollspy="cls: uk-animation-fade; delay: 500; repeat: false">
+        <a href="mailto:will.fclarke@gmail.com" class="uk-margin-small-right" uk-icon="mail"></a>
+        <a href="https://www.linkedin.com/in/WilliamFClarke" class="uk-margin-small-right" uk-icon="linkedin"></a>
+        <a href="https://github.com/WilliamFClarke" uk-icon="github"></a>
+        <p>Created by William Clarke using <a href="https://getuikit.com/">UIKit</a>, <a href="https://threejs.org/">Three.js</a> and this <a href="https://tympanus.net/codrops/2022/01/05/crafting-scroll-based-animations-in-three-js/">tutorial</a></p>  
+        <p>&copy; William Clarke</p>
+        </div>
+    </footer>
+    
+    <script src="./three.min.js"></script>
+    <script src="./gsap.min.js"></script>
+    <script src="./script.js"></script>
+</body>
 </html>
