@@ -13,7 +13,7 @@ const scene = new THREE.Scene();
 const objectsDistance = 4;
 
 // Material
-const material = new THREE.MeshToonMaterial({ color: "#ffeded" });
+const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
 
 // Meshes
 const mesh1 = new THREE.Mesh(new THREE.TorusGeometry(1, 0.4, 16, 60), material);
@@ -58,7 +58,7 @@ particlesGeometry.setAttribute(
 
 // Material
 const particlesMaterial = new THREE.PointsMaterial({
-  color: "#ffeded",
+  color: "#000111",
   sizeAttenuation: true,
   size: 0.03,
 });
@@ -70,9 +70,11 @@ scene.add(particles);
 /**
  * Lights
  */
-const directionalLight = new THREE.DirectionalLight("#ffffff", 1);
-directionalLight.position.set(1, 1, 0);
-scene.add(directionalLight);
+const pointLight = new THREE.PointLight(0xffffff);
+pointLight.position.set(5, 3.5, 5);
+
+const ambientLight = new THREE.AmbientLight(0xffffff);
+scene.add(ambientLight, pointLight);
 
 /**
  * Sizes
@@ -125,10 +127,10 @@ const cursor = {};
 cursor.x = 0;
 cursor.y = 0;
 
-window.addEventListener("mousemove", (event) => {
-  cursor.x = event.clientX / sizes.width - 0.5;
-  cursor.y = event.clientY / sizes.height - 0.5;
-});
+// window.addEventListener("mousemove", (event) => {
+//   cursor.x = event.clientX / sizes.width - 0.5;
+//   cursor.y = event.clientY / sizes.height - 0.5;
+// });
 
 /**
  * Camera
@@ -153,6 +155,7 @@ cameraGroup.add(camera);
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
   alpha: true,
+  antialias: true,
 });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
