@@ -6,7 +6,7 @@
 
 html
 {
-    background: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff, #e0a88d);
 }
 
 .webgl
@@ -38,4 +38,5 @@ section:nth-child(odd)
 #footer 
 {
     padding-top:0px;
+    color: white !important;
 }
