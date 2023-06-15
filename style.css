@@ -35,6 +35,9 @@ section:nth-child(odd)
     /* justify-content: flex-end; */
 }
 
+.uk-card {
+    backdrop-filter: blur(6px);
+}
 
 #mainTitle {
     display: flex;
