@@ -36,7 +36,7 @@ section:nth-child(odd)
 }
 
 .uk-card {
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(8px);
 }
 
 #mainTitle {
