@@ -165,6 +165,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
  */
 const clock = new THREE.Clock();
 let previousTime = 0;
+let speed = 0.025;
 
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
@@ -176,6 +177,11 @@ const tick = () => {
     mesh.rotation.x += deltaTime * 0.1;
     mesh.rotation.y += deltaTime * 0.12;
   }
+
+  // float meshes
+  mesh1.position.x = Math.sin(elapsedTime * speed) * 1.5;
+  mesh2.position.x = Math.sin(elapsedTime * speed) * -1.45;
+  mesh3.position.x = Math.sin(elapsedTime * speed) * 1.75;
 
   // Animate camera
   camera.position.y = (-scrollY / sizes.height) * objectsDistance;
