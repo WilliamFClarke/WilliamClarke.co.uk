@@ -6,7 +6,7 @@
 
 html
 {
-    background: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff, #e0a88d);
 }
 
 .webgl
@@ -35,7 +35,22 @@ section:nth-child(odd)
     /* justify-content: flex-end; */
 }
 
+
+#mainTitle {
+    display: flex;
+}
+
+#aboutMe {
+    display: flex;
+}
+
+#projects {
+    display: block;
+}
+
+
 #footer 
 {
     padding-top:0px;
+    color: white !important;
 }
