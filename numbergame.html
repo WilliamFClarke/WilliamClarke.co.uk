@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>number game</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.40/js/uikit-icons.min.js"></script>
+</head>
+
+<body onLoad="getCurentNumberInstant();getCurentNumber();">
+  <div  id="background-image" class="uk-background-fixed uk-background-center-center uk-height-viewport" style="background-image: url(bg1.jpg);">
+    <div  id="Game" class="uk-animation-fade uk-position-center uk-card uk-card-default uk-card-body uk-card-hover uk-card-small">
+      <div id="content" class="uk-card-body uk-text-center">
+        <h3 class="uk-card-title uk-card-header">Will's Number Game</h3>
+        <div class="uk-margin">
+          <h1 id="curNum" class="uk-heading-hero uk-text-center">?</h1>
+        </div>
+        <div class="uk-margin">
+          <input type="TEXT" id="userTest" class="uk-input uk-width-1-2" type="text" placeholder="Name">
+          <input type="number" id="numberTest" pattern="[0-9]*" class="uk-input uk-width-1-2" inputmode="numeric" placeholder="Number">
+        </div>
+        <button type="button" class="uk-button uk-button-default" onclick="loadDoc()">Submit Number</button>
+        <p id="demo"> &nbsp; </p>
+        <hr class="uk-divider-small">
+        <h3 id="numbersTitle">Your Numbers:</h3>
+        <p id="myNumbers" class="uk-text-break">&nbsp;</p>
+        <button type="button" uk-toggle="target: #how-to-modal" type="button" class="uk-card-footer uk-text-meta" uk-icon="question" ></button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- This is the modal -->
+  <div id="how-to-modal" uk-modal>
+      <div class="uk-modal-dialog uk-modal-body">
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+          <h2 class="uk-modal-title">HOW TO PLAY</h2>
+          <p>Will's number game is a massively multiplayer online cooperative counting game. That's right, the worlds first MMOCCG! Submit the number on screen with you username to claim that number (it's yours to keep forever). However, you'll need to be quick as each number can only be claimed by one person!<br><br>  Happy Counting &#x1F601; </p>
+      </div>
+  </div>
+
+</body>
+<script>
+function loadDoc() {
+  var name = document.getElementById("userTest").value
+  var number = document.getElementById("numberTest").value
+  if (number && name){
+    console.log(number)
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("demo").innerHTML = this.responseText;
+        if (this.responseText.includes("CORRECT! You")){
+          document.getElementById("myNumbers").innerHTML += number + " ";
+        };
+      };
+    };
+    xhttp.open("POST", "https://wills-awesome-number-game.herokuapp.com/numbergame/setnumber?user=" + name + "&number=" + number , true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send();
+    getCurentNumberInstant();
+  } else {
+    document.getElementById("demo").innerHTML = "Name or Number not set"
+    getCurentNumberInstant();
+    return;
+  };
+  };
+
+setInterval(function getCurentNumber() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("curNum").innerHTML = this.responseText;
+    };
+  };
+  xhttp.open("GET", "https://wills-awesome-number-game.herokuapp.com/numbergame/getnumber", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send();
+}, 5000);
+
+function getCurentNumberInstant() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("curNum").innerHTML = this.responseText;
+    };
+  };
+  xhttp.open("GET", "https://wills-awesome-number-game.herokuapp.com/numbergame/getnumber", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send();
+};
+
+</script>
+
+</body>
+</html>
